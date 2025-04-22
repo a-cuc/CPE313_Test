@@ -54,6 +54,6 @@ else:
     image=Image.open(file)
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
-    class_names=['Drowsy' 'Normal']
-    string="OUTPUT : "+class_names[prediction]
+    class_names=['Drowsy', 'Normal']
+    string="OUTPUT : "+ class_names[prediction]
     st.success(string)
