@@ -29,7 +29,7 @@ class CustomFixedFeatureModel_Hyper_Result(nn.Module):
 model = models.efficientnet_v2_s(weights='DEFAULT')
 model.classifier = nn.Identity()  # Remove the final classification layer
 model = CustomFixedFeatureModel_Hyper_Result(model)
-model.load_state_dict(torch.load('model2_ffe7_weights.pth', weights_only=True))
+model.load_state_dict(torch.load('model2_ffe7_weights.pth', map_location='cpu'))
 
 st.write("""
 # Drowsiness Detection System by Angelo"""
